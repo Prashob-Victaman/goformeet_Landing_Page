@@ -2,6 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Be Vietnam Pro', 'sans-serif';
+    scroll-behavior: smooth;
+}
+
+.home-page-container {
+    position: relative;
+    width: 100%;
 }
 
 .navbar {
@@ -9,14 +15,15 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f1f1f1;
-    height: 12vh;
+    height: 15vh;
     width: 100%;
     padding: 20px 40px;
+    position: fixed;
+    top: 0px;
 }
 
 .nav-logo {
-    width: 100px;
-    height: 70px;
+    width: 120px;
 }
 
 .navbar-menu-list {
@@ -41,12 +48,11 @@
 .landing-container {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    height: 80vh;
     width: 100%;
     background-color: #f1f1f1;
     padding: 50px 10%;
+    margin-top: 15vh;
 }
 
 .heading {
@@ -228,6 +234,7 @@
     }
     .landing-container {
         padding: 50px 10px;
+        margin-top: 10vh;
         
     }
     .features-wrapper {
