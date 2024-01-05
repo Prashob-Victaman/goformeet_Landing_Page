@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-a {
+app-button-link {
   text-decoration: none !important;
 }
 
