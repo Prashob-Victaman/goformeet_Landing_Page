@@ -10,6 +10,7 @@
     <link rel="icon" href="favicon_logo.png" type="image/gif" sizes="16x16">
     <link rel="favicon" href="favicon_logo.png" type="image/gif" sizes="16x16">
     <meta name="description" content="Go for Meet is a platform where you can meet your favorite celebrities and professionals.">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <title>Go for Meet</title>
 </head>
 <body>
@@ -100,11 +101,11 @@
             <div class="contact-form-wrapper">
                 <h1 class="contact-form-heading">Contact Us</h1>
                 <form class="contact-form">
-                    <input type="text" name="name" placeholder="Name" class="contact-form-input" required>
-                    <input type="email" name="email" placeholder="Email" class="contact-form-input" required>
-                    <input type="number" name="phone" placeholder="Phone Number" class="contact-form-input" required>
-                    <textarea name="message" placeholder="Your Message" rows="6" class="contact-form-textarea" required></textarea>
-                    <button type="submit" class="contact-form-button">Submit</button>
+                    <input type="text" name="name" id="name" placeholder="Name" class="contact-form-input" required>
+                    <input type="email" name="email" id="email" placeholder="Email" class="contact-form-input" required>
+                    <input type="number" name="phone" id="phone" placeholder="Phone Number" class="contact-form-input" required>
+                    <textarea name="message" id="message" placeholder="Your Message" rows="6" class="contact-form-textarea" required></textarea>
+                    <button type="button" id="submit-button" class="contact-form-button">Submit</button>
                 </form>
             </div>
         </div>
