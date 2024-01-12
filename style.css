@@ -201,6 +201,7 @@
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 20px;
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -219,6 +220,7 @@
     align-items: center;
     background-color: #00000035;
     backdrop-filter: blur(3px);
+    z-index: 100;
 }
 
 .active {
@@ -231,6 +233,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: -1;
 }
 
 .contact-form-wrapper {
