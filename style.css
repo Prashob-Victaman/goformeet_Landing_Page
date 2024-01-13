@@ -72,10 +72,20 @@
     display: none;
 }
 
-.demo {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+.nav-footer {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.nav-footer-heading {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 20px;
 }
 
 .heading {
@@ -196,6 +206,12 @@
     color: #000000;
     font-size: 21px;
     margin-right: 23px;
+}
+
+.social-icon-nav {
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 .footer-links {
@@ -437,6 +453,10 @@
 
     .footer-social-media {
         margin-bottom: 25px;
+    }
+
+    .footer-social-media-nav {
+        margin-bottom: 0px;
     }
 
     .footer-links {
