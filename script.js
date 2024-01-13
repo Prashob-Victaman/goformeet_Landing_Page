@@ -7,6 +7,26 @@
 const formContainer = document.getElementById('form-container');
 const contactLink = document.getElementById('contact-link');
 const overlay = document.getElementById('overlay');
+const mobileNavbar = document.getElementById('mobile-navbar');
+const menuButton = document.getElementById('menu-button');
+const closeButton = document.getElementById('close-button');
+const mobileOverlay = document.getElementById('mobile-navbar-overlay');
+
+mobileOverlay.addEventListener('click', () => {
+    mobileNavbar.classList.add('mobile-navbar-hidden');
+    mobileOverlay.classList.remove('mobile-navbar-overlay');
+})
+
+menuButton.addEventListener('click', () => {
+    mobileNavbar.classList.remove('mobile-navbar-hidden');
+    mobileOverlay.classList.add('mobile-navbar-overlay');
+
+})
+
+closeButton.addEventListener('click', () => {
+    mobileNavbar.classList.add('mobile-navbar-hidden');
+    mobileOverlay.classList.remove('mobile-navbar-overlay');
+})
 
 
 const submitButton = document.getElementById('submit-button');

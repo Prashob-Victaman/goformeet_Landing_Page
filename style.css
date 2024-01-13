@@ -59,6 +59,19 @@
     margin-top: 15vh;
 }
 
+.menu-button {
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
 .heading {
     text-align: center;
     font-family: Be Vietnam Pro, sans-serif;
@@ -209,6 +222,11 @@
     display: none !important;
 }
 
+.close-icon {
+    color: white!important;
+    font-size: 28px!important;
+}
+
 .contact-form-container {
     position: fixed;
     top: 0vh;
@@ -318,6 +336,61 @@
         cursor: pointer;
         color: #222222;
         font-size: 25px;
+    }
+
+    .menu-button {
+        display: block !important;
+    }
+
+    .mobile-navbar {
+        padding: 20px 25px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: flex-start;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #de4c17;
+        z-index: 1000;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .mobile-navbar-menu-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40%;
+        list-style-type: none;
+        padding-left: 0px;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .mobile-navbar-links {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .mobile-navbar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        background-color: #00000020;
+        backdrop-filter: blur(1px);
+    }
+    
+    .mobile-navbar-hidden {
+        /* display: none!important; */
+        transform: translateX(100%);
     }
 
     .heading {
