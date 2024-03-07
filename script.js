@@ -91,8 +91,10 @@ submitBtn.addEventListener("click", async () => {
   const apiUrl = `https://enterprise.smsgupshup.com/GatewayAPI/rest?userid=2000236219&password=JWLEzyyqC&send_to=${mobileNumber}&method=SendMessage&msg=Dear%20Customer,%3Cbr%3E%3Cbr%3E%20Your%20friend%20Goformeet,%20has%20invited%20you%20to%20download%20Goformeet.%20Download%20https://onelink.to/zyv2v2%3Cbr%3E%20Goformeet &msg_type=TEXT&&auth_scheme=plain&v=1.1&format=text`;
   try {
     const response = await fetch(apiUrl, { method: "GET" });
+    console.log(response)
     if (response.ok) {
       alert("Sent successfully! check your mobile")
+      document.getElementById("mobileNumber").value = "";
     } else {
       alert("Request Failed Try again Later")
     }
