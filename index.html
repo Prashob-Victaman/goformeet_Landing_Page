@@ -44,6 +44,11 @@
           />
         </a>
         <ul class="navbar-menu-list">
+          <li class="navbar-item" id="internshipLink">
+            <button class="app-button internship-button">
+              Apply Internship
+            </button>
+          </li>
           <li class="navbar-item">
             <a href="#Home" class="navbar-links" id="home-page">Home</a>
           </li>
@@ -99,6 +104,11 @@
                 >About</a
               >
             </li>
+            <li class="mobile-navbar-item">
+              <a class="mobile-navbar-links" id="mobileInternshipLink"
+                >Apply Internship
+              </a>
+            </li>
           </ul>
           <div class="nav-footer">
             <h1 class="nav-footer-heading">Follow us at:</h1>
@@ -117,6 +127,77 @@
               ></a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="contact-form-container" id="internshipFormContainer">
+        <div class="contact-form-overlay" id="overlay"></div>
+        <div class="contact-form-wrapper">
+          <h1 class="contact-form-heading">Apply for Internship</h1>
+          <form class="contact-form" id="internshipForm">
+            <input
+              type="text"
+              name="name"
+              id="internshipName"
+              placeholder="Name"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="internshipEmail"
+              placeholder="Email"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="number"
+              name="phone"
+              id="internshipNumber"
+              placeholder="Phone Number"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="text"
+              name="qualification"
+              id="internshipQualification"
+              placeholder="Qualification"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="text"
+              name="currentadress"
+              id="currentAddress"
+              placeholder="current Address"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="text"
+              name="permenantadress"
+              id="permenantAddress"
+              placeholder="Permenant Address"
+              class="contact-form-input"
+              required
+            />
+            <input
+              type="number"
+              name="phone"
+              id="emergencyNumber"
+              placeholder="Emergency Number"
+              class="contact-form-input"
+              required
+            />
+            <button
+              type="button"
+              id="internshipSubmitButton"
+              class="contact-form-button"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
       <div class="landing-container" id="Home">
@@ -306,7 +387,7 @@
         <p class="text">Message sent</p>
       </div>
     </div>
-   
+
     <script src="script.js"></script>
   </body>
 </html>

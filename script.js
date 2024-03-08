@@ -94,7 +94,7 @@ submitBtn.addEventListener("click", async () => {
   try {
     const response = await fetch(apiUrl, { method: "GET" });
     console.log(response);
-    if (response.ok) {
+    if (response.status === 200) {
       alert("Sent successfully! check your mobile");
     } else {
       alert("Request Failed Try again Later");
@@ -103,5 +103,92 @@ submitBtn.addEventListener("click", async () => {
     console.log(error.message);
   } finally {
     document.getElementById("mobileNumber").value = "";
+  }
+});
+
+const internshipFormContainer = document.getElementById(
+  "internshipFormContainer"
+);
+const internshipForm = document.getElementById("internshipForm");
+const internshipLink = document.getElementById("internshipLink");
+const mobileInternshipLink = document.getElementById("mobileInternshipLink");
+const internshipSubmitButton = document.getElementById(
+  "internshipSubmitButton"
+);
+
+internshipLink.addEventListener("click", () => {
+  internshipFormContainer.classList.add("active");
+});
+
+mobileInternshipLink.addEventListener("click", () => {
+  internshipFormContainer.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  internshipForm.classList.remove("active");
+});
+
+internshipSubmitButton.addEventListener("click", async (event) => {
+  event.preventDefault();
+  let name = document.getElementById("internshipName").value;
+  let email = document.getElementById("internshipEmail").value;
+  let phoneNumber = document.getElementById("internshipNumber").value;
+  let qualification = document.getElementById("internshipQualification").value;
+  let currentAddress = document.getElementById("currentAddress").value;
+  let permenantAddress = document.getElementById("permenantAddress").value;
+  let emergencyNumber = document.getElementById("emergencyNumber").value;
+
+  if (
+    name &&
+    email &&
+    phone &&
+    qualification &&
+    currentAddress &&
+    permenantAddress &&
+    emergencyNumber
+  ) {
+    var content =
+      "Name: " +
+      name +
+      "<br>" +
+      "Email: " +
+      email +
+      "<br>" +
+      "Phone Number: " +
+      phoneNumber +
+      "<br>" +
+      "Qualification: " +
+      qualification +
+      "<br>" +
+      "Current Address: " +
+      currentAddress +
+      "<br>" +
+      "Permenant Address: " +
+      permenantAddress +
+      "<br>" +
+      "Emergency Phone: " +
+      emergencyNumber;
+
+    // Send data to API
+    var apiURL =
+      "https://enterprise.webaroo.com/GatewayAPI/rest?method=EMS_POST_CAMPAIGN&userid=2000702445&password=LEP9yt&v=1.1&content_type=text/html&name=New%20Internship%20ApplicationfromEmailId=info@ecomadminpro.com&subject=New%20Internship%20Application&recipients=career@goformeet.co";
+    var encodedContent = encodeURIComponent(content);
+    var finalURL =
+      apiURL +
+      "&content=" +
+      encodedContent +
+      "&replyToEmailID=info@ecomadminpro.com";
+    try {
+      const response = await fetch(finalURL, {
+        method: "GET",
+        mode: "no-cors",
+      });
+      alert("Application Successfull");
+    } catch (e) {
+      alert("Application isn't successfull. Try again later");
+    } finally {
+      internshipForm.reset();
+      internshipFormContainer.classList.remove("active");
+    }
   }
 });
