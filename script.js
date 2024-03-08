@@ -186,5 +186,7 @@ internshipSubmitButton.addEventListener("click", async (event) => {
       internshipForm.reset();
       internshipFormContainer.classList.remove("active");
     }
+  } else{
+    alert("Please Fill the Form!")
   }
 });
