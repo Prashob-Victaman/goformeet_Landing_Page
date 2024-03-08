@@ -398,6 +398,35 @@
   padding: 0px 15px;
 }
 
+.icon {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  color: white;
+}
+
+.text {
+  color: white;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  background-color: black;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  border: 5px solid #029c91;
+}
+
+
+.hide-toast{
+  display: none;
+}
+
+
 @media screen and (max-width: 768px) {
   .navbar-menu-list {
     display: none;
@@ -570,19 +599,7 @@
     font-size: 14px;
   }
 
-  .app-download-link h4 {
-    font-size: 18px;
-  }
-
-  .download-btn-container .download-btn {
-    display: block;
-  }
-
-  .mobile-number-input {
+  .app-download-link{
     display: none;
-  }
-
-  .download-btn-container {
-    display: flex;
   }
 }
