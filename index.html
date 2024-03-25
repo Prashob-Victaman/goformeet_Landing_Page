@@ -31,7 +31,10 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <title>Goformeet | Meet, Earn and Connect: Unlock endless solutions with just one app</title>
+    <title>
+      Goformeet | Meet, Earn, Connect: Unlock endless solutions with just one
+      app
+    </title>
   </head>
   <body>
     <div class="home-page-container">
@@ -158,27 +161,29 @@
               class="contact-form-input"
               required
             />
-            <input
-              type="text"
+            <select
               name="qualification"
+              title="Qualification"
               id="internshipQualification"
               placeholder="Qualification"
               class="contact-form-input"
-              required
-            />
+            >
+              <option value="10th Class">10th Class</option>
+              <option value="+2 pass">+2 Pass</option>
+              <option value="pursuing bachelor's degree">
+                Pursuing Bachelor's Degree
+              </option>
+              <option value="pursuing master's degree">
+                Pursuing Master's Degree
+              </option>
+              <option value="bachelor's degree">Bachelor's Degree</option>
+              <option value="master's degree">Master's Degree</option>
+            </select>
             <input
               type="text"
               name="currentadress"
               id="currentAddress"
-              placeholder="current Address"
-              class="contact-form-input"
-              required
-            />
-            <input
-              type="text"
-              name="permenantadress"
-              id="permenantAddress"
-              placeholder="Permenant Address"
+              placeholder="Current Address"
               class="contact-form-input"
               required
             />
@@ -190,13 +195,22 @@
               class="contact-form-input"
               required
             />
-            <button
-              type="button"
-              id="internshipSubmitButton"
-              class="contact-form-button"
-            >
-              Submit
-            </button>
+            <div class="buttons-container">
+              <button
+                type="button"
+                id="internshipSubmitButton"
+                class="contact-form-button"
+              >
+                Submit
+              </button>
+              <button
+                type="button"
+                id="internshipCloseButton"
+                class="contact-form-button"
+              >
+                Close
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -236,7 +250,12 @@
               Don't just meet – earn with Goformeet!
             </h1>
             <p class="feature-description">
-              Discover a whole new way to connect with Goformeet! Schedule meetings with professionals at your convenience and expand your network effortlessly. With Goformeet, professionals can earn money while users seize the opportunity to meet new faces. It's not just about meetings; it's about seizing every timing as an opportunity to make money online.
+              Discover a whole new way to connect with Goformeet! Schedule
+              meetings with professionals at your convenience and expand your
+              network effortlessly. With Goformeet, professionals can earn money
+              while users seize the opportunity to meet new faces. It's not just
+              about meetings; it's about seizing every timing as an opportunity
+              to make money online.
             </p>
           </div>
         </div>
@@ -249,8 +268,12 @@
           <div class="feature-content">
             <h1 class="feature-heading">Find your next meetup spot today!</h1>
             <p class="feature-description">
-              Looking to level up your professional network? Look no further than Goformeet! Schedule offline meetings with professionals at your convenience. Meet new people, make new friends, and expand your circle. With personalized one-on-one meets and opportunities to connect with celebrities, Goformeet is where free time 
-meets meaningful connections. 
+              Looking to level up your professional network? Look no further
+              than Goformeet! Schedule offline meetings with professionals at
+              your convenience. Meet new people, make new friends, and expand
+              your circle. With personalized one-on-one meets and opportunities
+              to connect with celebrities, Goformeet is where free time meets
+              meaningful connections.
             </p>
           </div>
         </div>
@@ -263,7 +286,12 @@ meets meaningful connections.
           <div class="feature-content">
             <h1 class="feature-heading">Monetize your expertise</h1>
             <p class="feature-description">
-              Introducing the ultimate host of connections and cash, Goformeet! Dive into a world where your free time transforms into earning potential. As a host, seize the opportunity to monetize your expertise while users expand their network at their convenience. With Goformeet, time becomes money, and meeting new people is the pathway to lucrative ways of earnings.
+              Introducing the ultimate host of connections and cash, Goformeet!
+              Dive into a world where your free time transforms into earning
+              potential. As a host, seize the opportunity to monetize your
+              expertise while users expand their network at their convenience.
+              With Goformeet, time becomes money, and meeting new people is the
+              pathway to lucrative ways of earnings.
             </p>
           </div>
         </div>
@@ -302,7 +330,7 @@ meets meaningful connections.
         <div class="contact-form-overlay" id="overlay"></div>
         <div class="contact-form-wrapper">
           <h1 class="contact-form-heading">Contact Us</h1>
-          <form class="contact-form">
+          <div class="contact-form">
             <input
               type="text"
               name="name"
@@ -335,6 +363,7 @@ meets meaningful connections.
               class="contact-form-textarea"
               required
             ></textarea>
+            <div class="buttons-container">
             <button
               type="button"
               id="submit-button"
@@ -342,47 +371,55 @@ meets meaningful connections.
             >
               Submit
             </button>
+            <button
+              type="button"
+              id="contactCloseButton"
+              class="contact-form-button"
+            >
+              Close
+            </button>
+          </div>
           </form>
         </div>
       </div>
-      <div class="app-download-link">
-        <div>
-          <h4>Get Link in SMS to download <span>Goformeet</span> App</h4>
-          <p>Download Goformeet, For Guaranteed Meetings!</p>
-        </div>
-        <div class="download-btn-container">
-          <div class="mobile-number-input">
-            <h4>+91</h4>
-            <input
-              type="text"
-              id="mobileNumber"
-              name="mobile Number"
-              placeholder="Mobile Number *"
-              required
-            />
-            <button type="button" class="submit-btn" id="submitBtn">
-              Submit
-            </button>
-          </div>
-        </div>
+    </div>
+    <div class="app-download-link">
+      <div>
+        <h4>Get Link in SMS to download <span>Goformeet</span> App</h4>
+        <p>Download Goformeet, For Guaranteed Meetings!</p>
       </div>
-      <div class="toast hide-toast" id="toast">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          class="icon"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      <div class="download-btn-container">
+        <div class="mobile-number-input">
+          <h4>+91</h4>
+          <input
+            type="text"
+            id="mobileNumber"
+            name="mobile Number"
+            placeholder="Mobile Number *"
+            required
           />
-        </svg>
-        <p class="text">Message sent</p>
+          <button type="button" class="submit-btn" id="submitBtn">
+            Submit
+          </button>
+        </div>
       </div>
+    </div>
+    <div class="toast hide-toast" id="toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        class="icon"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <p class="text">Message sent</p>
     </div>
 
     <script src="script.js"></script>

@@ -1,38 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Be Vietnam Pro' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/c5eb76d5b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Be Vietnam Pro"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c5eb76d5b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
-</head>
-<body>
-    <div class="privacy-container">
-        <div class="privacy-content">
-            <h1 class="privacy-heading">About</h1>
-            <p class="privacy-description"> Goformeet Consulting Private Limited </p>
-            <div class="footer-social-media">
-                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin social-icon"></i></a>
-                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube social-icon"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook social-icon"></i></a>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram social-icon"></i></a>
-            </div>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" id="navbar-logo">
+        <img
+          src="../logo_splashscreen.png"
+          alt="website logo"
+          class="nav-logo"
+        />
+      </a>
+      <ul class="navbar-menu-list">
+        <li class="navbar-item" id="internshipLink">
+          <button class="app-button internship-button">
+            Apply for Internship
+          </button>
+        </li>
+        <li class="navbar-item">
+          <a href="/index.html#Home" class="navbar-links" id="home-page"
+            >Home</a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href="/index.html#Host" class="navbar-links">Host</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/index.html#Guest" class="navbar-links" id="contact"
+            >Guest</a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href="/index.html#Meetings" class="navbar-links" id="contact"
+            >Meetings</a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href="/AboutPage/index.html" class="navbar-links" id="contact"
+            >About</a
+          >
+        </li>
+      </ul>
+      <button class="menu-button" id="menu-button">
+        <i class="fa-solid fa-bars burger"></i>
+      </button>
+    </nav>
+    <div class="">
+      <div id="mobile-navbar-overlay"></div>
+      <div class="mobile-navbar mobile-navbar-hidden" id="mobile-navbar">
+        <button type="button" class="menu-button" id="close-button">
+          <i class="fa-solid fa-xmark burger close-icon"></i>
+        </button>
+        <ul class="mobile-navbar-menu-list">
+          <li class="mobile-navbar-item">
+            <a href="/index.html" class="mobile-navbar-links" id="home-page"
+              >Home</a
+            >
+          </li>
+          <li class="mobile-navbar-item">
+            <a href="/index.html#Host" class="mobile-navbar-links">Host</a>
+          </li>
+          <li class="mobile-navbar-item">
+            <a href="/index.html#Guest" class="mobile-navbar-links" id="contact"
+              >Guest</a
+            >
+          </li>
+          <li class="mobile-navbar-item">
+            <a
+              href="/index.html#Meetings"
+              class="mobile-navbar-links"
+              id="contact"
+              >Meetings</a
+            >
+          </li>
+          <li class="mobile-navbar-item">
+            <a
+              href="/AboutPage/index.html"
+              class="mobile-navbar-links"
+              id="contact"
+              >About</a
+            >
+          </li>
+          <li class="mobile-navbar-item">
+            <a class="mobile-navbar-links" id="mobileInternshipLink"
+              >Apply for Internship
+            </a>
+          </li>
+        </ul>
+        <div class="nav-footer">
+          <h1 class="nav-footer-heading">Follow us at:</h1>
+          <div class="footer-social-media-nav">
+            <a href="https://www.linkedin.com/goformeet" target="_blank"
+              ><i class="fa-brands fa-linkedin social-icon-nav"></i
+            ></a>
+            <a href="https://www.youtube.com/@goformeet" target="_blank"
+              ><i class="fa-brands fa-youtube social-icon-nav"></i
+            ></a>
+            <a href="https://www.facebook.com/goformeet" target="_blank"
+              ><i class="fa-brands fa-facebook social-icon-nav"></i
+            ></a>
+            <a href="https://www.instagram.com/goformeet" target="_blank"
+              ><i class="fa-brands fa-instagram social-icon-nav"></i
+            ></a>
+          </div>
         </div>
-        <div class="privacy-content">
-            <div class="location-icon-con">
-                <i class="fa-solid fa-location-dot location-icon"></i>
-            </div>
-            <p class="privacy-description">
-                Goformeet Consulting Private Limited, <br />
-                Bhive Koramangala, <br />
-                4th C Cross Road, 5th Block <br />
-                Bangalore, KA - 560095, India <br />
-                Email: info(@)goformeet(.)co <br />
-                Phone: +91 88842 55828 <br />
-            </p>
-        </div>
+      </div>
     </div>
-</body>
+    <div class="contact-form-container" id="internshipFormContainer">
+      <div class="contact-form-overlay" id="overlay"></div>
+      <div class="contact-form-wrapper">
+        <h1 class="contact-form-heading">Apply for Internship</h1>
+        <form class="contact-form" id="internshipForm">
+          <input
+            type="text"
+            name="name"
+            id="internshipName"
+            placeholder="Name"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="internshipEmail"
+            placeholder="Email"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="internshipNumber"
+            placeholder="Phone Number"
+            class="contact-form-input"
+            required
+          />
+          <select
+            name="qualification"
+            title="Qualification"
+            id="internshipQualification"
+            placeholder="Qualification"
+            class="contact-form-input"
+          >
+            <option value="10th Class">10th Class</option>
+            <option value="+2 pass">+2 Pass</option>
+            <option value="pursuing bachelor's degree">
+              Pursuing Bachelor's Degree
+            </option>
+            <option value="pursuing master's degree">
+              Pursuing Master's Degree
+            </option>
+            <option value="bachelor's degree">Bachelor's Degree</option>
+            <option value="master's degree">Master's Degree</option>
+          </select>
+          <input
+            type="text"
+            name="currentadress"
+            id="currentAddress"
+            placeholder="Current Address"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="emergencyNumber"
+            placeholder="Emergency Number"
+            class="contact-form-input"
+            required
+          />
+          <div class="buttons-container">
+            <button
+              type="button"
+              id="internshipSubmitButton"
+              class="contact-form-button"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              id="internshipCloseButton"
+              class="contact-form-button"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="privacy-container">
+      <div class="privacy-content">
+        <h1 class="privacy-heading">About</h1>
+      </div>
+      <div class="privacy-content about-container">
+        <h1>
+          Meet, Connect and Earn: The Power of GoForMeet in Monetizing Your Time
+        </h1>
+        <p>
+          Time is a crucial resource that is sometimes undervalued in our
+          fast-paced society. Individuals devote numerous hours to attending
+          gatherings, be they business-related or social, without obtaining any
+          financial benefit.. However, with the advent of GoForMeet, individuals
+          now have the opportunity to monetize their time while expanding their
+          network and connecting with like-minded professionals. GoForMeet is a
+          revolutionary meeting app designed for professionals seeking to
+          maximize their time and productivity. The platform allows users to
+          schedule meetings with professionals at their convenience, offering
+          flexibility and efficiency in arranging discussions.
+        </p>
+        <h2>Genesis of the idea Since 2019</h2>
+
+        <p>
+          Saurav has been grappling with unproductive meetings and the challenge
+          of finding reliable professionals for guidance. These experiences
+          highlighted a gap in the market for a platform that could streamline
+          meeting processes and connect individuals with the right expertise.
+          Motivated by his dissatisfaction with the current situation, Saurav
+          set out to create a solution that would adequately handle these
+          problems. He had an idea for a platform that would encourage
+          meaningful interactions and teamwork and eventually increase output.
+        </p>
+
+        <h2>How does GoForMeet work?</h2>
+        <h3>Scheduling Meetings</h3>
+        <p>
+          Users can easily schedule meetings through the GoForMeet app,
+          specifying their availability and preferred topics of discussion. This
+          streamlined process eliminates the hassle of back-and-forth
+          communication and ensures seamless coordination between parties.
+        </p>
+        <h3>Monetization Opportunities</h3>
+        <p>
+          One of the key features of GoForMeet is that you can monetize your
+          time , which enables professionals to earn money by meeting with
+          people. Whether sharing their expertise, providing guidance, or simply
+          engaging in casual conversations, users have the opportunity to
+          capitalize on their time and knowledge.
+        </p>
+        <h3>Benefits for Professionals</h3>
+        <p>
+          For professionals, GoForMeet offers a plethora of benefits beyond
+          financial rewards. By participating in meetings, they can showcase
+          their expertise, helps them in enhancing their network
+        </p>
+        <h3>Benefits for Users</h3>
+        <p>
+          On the user side, GoForMeet provides access to a diverse pool of
+          professionals across various industries and expertise areas. Whether
+          seeking career advice, mentorship, or specialized knowledge, users can
+          find the right match for their needs. Moreover, the platform fosters
+          meaningful connections and promotes personal and professional growth.
+          Can people can also get rid of their loneliness and boredom by meeting
+          people
+        </p>
+        <h3>The Importance of Time and Value</h3>
+        <p>
+          GoForMeet recognizes the value of time and aims to empower individuals
+          to make the most of it. By monetizing their time, users gain a
+          newfound appreciation for the hours they invest in meetings and
+          conversations. This shift in perspective fosters a culture of
+          efficiency and productivity, driving positive outcomes for both
+          individuals and businesses.
+        </p>
+        <h3>Ensuring Safety and Security</h3>
+        <p>
+          Safety and security are paramount considerations in any online
+          platform. GoForMeet prioritizes the safety and privacy of its users,
+          ensuring that all profiles are verified and have been checked by our
+          professionals. Additionally, the platform offers features such as user
+          verification and ratings to ensure a secure and trustworthy
+          environment for all participants.
+        </p>
+        <p>
+          Goformeet is completely bootstrapped and 100% stake is with founders.
+          Like every startup journey, Saurab, our founder, has navigated through
+          some thrilling challenges.
+        </p>
+        <h3>Pandemic Disruption</h3>
+        <p>
+          The COVID-19 epidemic first interfered with Saurav's attempts to
+          introduce GoForMeet. The creation and execution of his proposal faced
+          major obstacles due to the abrupt change to remote work and the
+          uncertainty that followed.
+        </p>
+        <h3>Disbelief and doubt.</h3>
+        <p>
+          Even though Saurav was adamant about GoForMeet's potential, he
+          encountered doubts from colleagues and business gurus. Some questioned
+          the feasibility of his concept, expressing concerns about safety and
+          the willingness of users to embrace a new platform for meeting.
+        </p>
+        <h3>Persistence and Vision</h3>
+        <p>
+          Despite obstacles, Saurav never gave up on his goal of making
+          GoForMeet a reality. He saw obstacles as chances for development and
+          improvement rather than as barriers.unflinching Belief Saurav's
+          journey has been driven mostly by his unflinching faith in GoForMeet's
+          capacity to transform. In his vision, it serves as a catalyst for
+          significant relationships and productive partnerships rather than only
+          being a platform.
+        </p>
+        <h3>Future Prospects and Expansion</h3>
+        <p>
+          As GoForMeet continues to grow and evolve, the possibilities are
+          endless. The platform has the potential to expand into new markets and
+          industries, catering to the diverse needs of professionals worldwide.
+          With ongoing innovation and strategic partnerships, GoForMeet is
+          poised to revolutionize the way people connect and collaborate in the
+          digital age
+        </p>
+        <p>
+          In the grand finale, your perseverance reaps its sweet
+          rewards.Saurav's journey to launch GoForMeet is a testament to the
+          power of persistence, innovation, and unwavering belief in one's
+          vision. Despite facing numerous challenges along the way, he remains
+          committed to realizing his dream of creating a platform that
+          revolutionizes the way people to connect and founded GoForMeet
+        </p>
+      </div>
+      
+    </div>
+    <footer class="footer">
+      <div class="privacy-content">
+        <div class="location-icon-con">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+        </div>
+        <p class="privacy-description">
+          Goformeet Consulting Private Limited, <br />
+          Bhive Koramangala, <br />
+          4th C Cross Road, 5th Block <br />
+          Bangalore, KA - 560095, India <br />
+          Email: info(@)goformeet(.)co <br />
+          Phone: +91 88842 55828 <br />
+        </p>
+        <div class="footer-social-media">
+          <a href="https://www.linkedin.com/"
+            ><i class="fa-brands fa-linkedin social-icon"></i
+          ></a>
+          <a href="https://www.youtube.com/"
+            ><i class="fa-brands fa-youtube social-icon"></i
+          ></a>
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook social-icon"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram social-icon"></i
+          ></a>
+        </div>
+      </div>
+        <div class="footer-link-wrapper">
+          <a href="/RefundPolicy/index.html" class="footer-link"
+            >Refund Policy</a
+          >
+          <!-- <a href="" class="footer-link">Support</a> -->
+          <a href="/TermsPage/index.html" class="footer-link">Terms</a>
+          <a href="/PrivacyPage/index.html" class="footer-link">Privacy</a>
+          <a class="footer-link" id="contact-link">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <div class="contact-form-container" id="form-container">
+      <div class="contact-form-overlay" id="overlay"></div>
+      <div class="contact-form-wrapper">
+        <h1 class="contact-form-heading">Contact Us</h1>
+        <form class="contact-form">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            class="contact-form-input"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            rows="6"
+            class="contact-form-textarea"
+            required
+          ></textarea>
+          <div class="buttons-container">
+          <button type="button" id="submit-button" class="contact-form-button">
+            Submit
+          </button>
+          <button
+              type="button"
+              id="contactCloseButton"
+              class="contact-form-button"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="app-download-link">
+      <div>
+        <h4>Get Link in SMS to download <span>Goformeet</span> App</h4>
+        <p>Download Goformeet, For Guaranteed Meetings!</p>
+      </div>
+      <div class="download-btn-container">
+        <div class="mobile-number-input">
+          <h4>+91</h4>
+          <input
+            type="text"
+            id="mobileNumber"
+            name="mobile Number"
+            placeholder="Mobile Number *"
+            required
+          />
+          <button type="button" class="submit-btn" id="submitBtn">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="toast hide-toast" id="toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        class="icon"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <p class="text">Message sent</p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

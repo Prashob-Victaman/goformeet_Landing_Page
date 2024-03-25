@@ -112,7 +112,6 @@ const internshipFormContainer = document.getElementById(
   "internshipFormContainer"
 );
 
-
 console.log(document.title);
 const internshipForm = document.getElementById("internshipForm");
 const internshipLink = document.getElementById("internshipLink");

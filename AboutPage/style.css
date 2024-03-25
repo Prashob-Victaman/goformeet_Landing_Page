@@ -12,6 +12,12 @@
 
 }
 
+
+
+.about-container h1,.about-container h2,.about-container h3{
+    margin: 10px 0;
+}
+
 .privacy-content {
     width: 60%;
     margin-bottom: 35px;
@@ -20,6 +26,7 @@
 .privacy-heading {
     font-size: 26px;
     font-weight: bold;
+    margin-top: 85px;
 }
 
 .privacy-description {
@@ -31,9 +38,9 @@
 }
 
 .footer-social-media {
-    display: flex;
-    align-items: center;
+    display: flex;  
     margin-top: 20px;
+    justify-content: flex-start;
     margin-bottom: 30px;
 }
 
