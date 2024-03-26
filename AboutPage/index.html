@@ -368,12 +368,102 @@
           <!-- <a href="" class="footer-link">Support</a> -->
           <a href="/TermsPage/index.html" class="footer-link">Terms</a>
           <a href="/PrivacyPage/index.html" class="footer-link">Privacy</a>
-          <a href="/CareersPage/index.html" class="footer-link" >Careers</a>
+          <a id="careersLink" class="footer-link" >Careers</a>
             <a href="/StoriesPage/index.html" class="footer-link" >Stories</a>
           <a class="footer-link" id="contact-link">Contact</a>
         </div>
       </div>
     </footer>
+    <div class="contact-form-container" id="careersFormContainer">
+      <div class="contact-form-overlay" id="overlay"></div>
+      <div class="contact-form-wrapper">
+        <h1 class="contact-form-heading">Apply for Freelance Job</h1>
+        <form class="contact-form" id="internshipForm">
+          <input
+            type="text"
+            name="name"
+            id="careersName"
+            placeholder="Name"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="careersEmail"
+            placeholder="Email"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="careersPhoneNumber"
+            placeholder="Phone Number"
+            class="contact-form-input"
+            required
+          />
+          <select
+            name="qualification"
+            title="Qualification"
+            id="careersQualification"
+            placeholder="Qualification"
+            class="contact-form-input"
+          >
+            <option value="10th Class">10th Class</option>
+            <option value="+2 pass">+2 Pass</option>
+            <option value="pursuing bachelor's degree">
+              Pursuing Bachelor's Degree
+            </option>
+            <option value="pursuing master's degree">
+              Pursuing Master's Degree
+            </option>
+            <option value="bachelor's degree">Bachelor's Degree</option>
+            <option value="master's degree">Master's Degree</option>
+          </select>
+          <input
+              type="text"
+              name="profession"
+              id="careersProfession"
+              placeholder="Profession"
+              class="contact-form-input"
+              required
+            />
+          <input
+            type="text"
+            name="currentadress"
+            id="careersAddress"
+            placeholder="Current Address"
+            class="contact-form-input"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            id="careersEmergencyNumber"
+            placeholder="Emergency Number"
+            class="contact-form-input"
+            required
+          />
+          <div class="buttons-container">
+            <button
+              type="button"
+              id="careersSubmitButton"
+              class="contact-form-button"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              id="careersCloseButton"
+              class="contact-form-button"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="contact-form-container" id="form-container">
       <div class="contact-form-overlay" id="overlay"></div>
       <div class="contact-form-wrapper">

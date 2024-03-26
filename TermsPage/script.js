@@ -205,3 +205,96 @@
     }
   });
   
+  const careersForm = document.getElementById("careersFormContainer");
+const careersLink = document.getElementById("careersLink");
+console.log(careersLink,careersForm);
+const careersCloseButton = document.getElementById("careersCloseButton");
+const careersInternshipLink = document.getElementById("careersInternshipLink");
+const careersSubmitButton = document.getElementById("careersSubmitButton");
+
+careersCloseButton.addEventListener("click", () => {
+  careersForm.classList.remove("active");
+});
+
+careersLink.addEventListener("click", () => {
+  careersForm.classList.add("active");
+});
+
+careersLink.addEventListener("click", () => {
+  careersForm.classList.add("active");
+});
+
+careersCloseButton.addEventListener("click", () => {
+  overlay.classList.remove("active");
+});
+
+careersSubmitButton.addEventListener("click", async (event) => {
+  event.preventDefault();
+  let name = document.getElementById("careersName").value;
+  let email = document.getElementById("careersEmail").value;
+  let phoneNumber = document.getElementById("careersPhoneNumber").value;
+  let qualification = document.getElementById("careersQualification").value;
+  let profession = document.getElementById("careersProfession").value;
+  let currentAddress = document.getElementById("careersAddress").value;
+  let emergencyNumber = document.getElementById("careersEmergencyNumber").value;
+
+  if (
+    name &&
+    email &&
+    phone &&
+    qualification &&
+    currentAddress &&
+    permenantAddress &&
+    profession &&
+    emergencyNumber
+  ) {
+    var content =
+      "Name: " +
+      name +
+      "<br>" +
+      "Email: " +
+      email +
+      "<br>" +
+      "Phone Number: " +
+      phoneNumber +
+      "<br>" +
+      "Qualification: " +
+      qualification +
+      "<br>" +
+      "Current Address: " +
+      currentAddress +
+      "<br>" +
+      "Permenant Address: " +
+      permenantAddress +
+      "<br>" +
+      "Emergency Phone: " +
+      emergencyNumber + 
+      "<br>" +
+      "Profession: " +
+      profession;
+
+    // Send data to API
+    var apiURL =
+      "https://enterprise.webaroo.com/GatewayAPI/rest?method=EMS_POST_CAMPAIGN&userid=2000702445&password=LEP9yt&v=1.1&content_type=text/html&name=New%20Internship%20ApplicationfromEmailId=info@ecomadminpro.com&subject=New%20Internship%20Application&recipients=career@goformeet.co";
+    var encodedContent = encodeURIComponent(content);
+    var finalURL =
+      apiURL +
+      "&content=" +
+      encodedContent +
+      "&replyToEmailID=info@ecomadminpro.com";
+    try {
+      const response = await fetch(finalURL, {
+        method: "GET",
+        mode: "no-cors",
+      });
+      alert("Application Successfull");
+    } catch (e) {
+      alert("Application isn't successfull. Try again later");
+    } finally {
+      internshipForm.reset();
+      internshipFormContainer.classList.remove("active");
+    }
+  } else {
+    alert("Please Fill the Form!");
+  }
+});
