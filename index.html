@@ -53,16 +53,16 @@
             </button>
           </li>
           <li class="navbar-item">
-            <a href="#Home" class="navbar-links" id="home-page">Home</a>
+            <a href="#Home" onclick="event.preventDefault()" class="navbar-links" id="home-page">Home</a>
           </li>
           <li class="navbar-item">
-            <a href="#Host" class="navbar-links">Host</a>
+            <a href="#Host" onclick="event.preventDefault()" class="navbar-links">Host</a>
           </li>
           <li class="navbar-item">
-            <a href="#Guest" class="navbar-links" id="contact">Guest</a>
+            <a href="./index.html#Guest" class="navbar-links" id="contact">Guest</a>
           </li>
           <li class="navbar-item">
-            <a href="#Meetings" class="navbar-links" id="contact">Meetings</a>
+            <a href="./index.html#Meetings" class="navbar-links" id="contact">Meetings</a>
           </li>
           <li class="navbar-item">
             <a href="/AboutPage/index.html" class="navbar-links" id="contact"
@@ -214,7 +214,7 @@
           </form>
         </div>
       </div>
-      <div class="landing-container" id="Home">
+      <div class="landing-container"  id="Home">
         <h1 class="heading">
           Book and <span class="highlight">#Goformeet</span><br class="break" />
           For Guaranteed meetings
@@ -422,6 +422,29 @@
       <p class="text">Message sent</p>
     </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling to anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+  
+              const targetId = this.getAttribute('href').substring(1);
+              const target = document.getElementById(targetId);
+  
+              if (target) {
+                  const offsetTop = target.getBoundingClientRect().top + window.pageYOffset;
+                  window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+  });
+  </script>
+  
     <script src="script.js"></script>
+
   </body>
 </html>
