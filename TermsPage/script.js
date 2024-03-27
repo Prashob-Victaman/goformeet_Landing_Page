@@ -96,7 +96,7 @@
     const number = document.getElementById("mobileNumber").value;
     const mobileNumber = "+91" + number;
     console.log(number);
-    const apiUrl = `https://enterprise.smsgupshup.com/GatewayAPI/rest?userid=2000236219&password=JWLEzyyqC&send_to=${mobileNumber}&method=SendMessage&msg=Dear%20Customer,%3Cbr%3E%3Cbr%3E%20Your%20friend%20Goformeet,%20has%20invited%20you%20to%20download%20Goformeet.%20Download%20https://onelink.to/zyv2v2%3Cbr%3E%20Goformeet &msg_type=TEXT&&auth_scheme=plain&v=1.1&format=text`;
+    const apiUrl = `https://enterprise.smsgupshup.com/GatewayAPI/rest?userid=2000236219&password=JWLEzyyqC&send_to=${mobileNumber}&method=SendMessage&msg=Hi,%20Thank%20you%20for%20your%20interest%20in%20creating%20an%20account%20on%20GoForMeet.%20Please%20download%20our%20app:%20https://onelink.to/zyv2v2&msg_type=TEXT&&auth_scheme=plain&v=1.1&format=text`;
     try {
       const response = await fetch(apiUrl, { method: "GET", mode: "no-cors" });
       alert("Sent successfully! check your mobile");
