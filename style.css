@@ -57,7 +57,12 @@
   min-height: 90vh;
   background-color: #f1f1f1;
   padding: 140px 10%;
-  margin-top: 15vh;
+}
+
+@media screen and (min-width: 1280px) {
+  .landing-container {
+    margin-top: 15vh;
+  }
 }
 
 .menu-button {
@@ -129,7 +134,7 @@
   cursor: pointer;
 }
 
-.internship-button{
+.internship-button {
   height: 40px;
   font-size: 18px;
   width: 200px;
@@ -316,7 +321,7 @@
   font-size: 16px;
 }
 
-.buttons-container{
+.buttons-container {
   display: flex;
   gap: 20px;
 }
@@ -432,11 +437,9 @@
   border: 5px solid #029c91;
 }
 
-
-.hide-toast{
+.hide-toast {
   display: none;
 }
-
 
 @media screen and (max-width: 768px) {
   .navbar-menu-list {
@@ -611,7 +614,7 @@
     font-size: 14px;
   }
 
-  .app-download-link{
+  .app-download-link {
     display: none;
   }
 }
